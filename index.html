@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hava Durumu | Harita & Favoriler</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+
+<body id="page">
+
+<div class="container">
+
+    <h1>🌍 Hava Durumu Paneli</h1>
+
+    <div class="search">
+        <input id="cityInput" placeholder="Şehir adı (İstanbul)">
+        <button onclick="getWeather()">Getir</button>
+    </div>
+
+    <!-- Hava Durumu Kartı -->
+    <div id="weatherCard" class="weather-card hidden">
+        <div id="icon" class="icon">☀️</div>
+
+        <h2 id="cityName"></h2>
+        <p id="temp"></p>
+        <p id="wind"></p>
+
+        <button onclick="addFavorite()">⭐ Favorilere Ekle</button>
+    </div>
+
+    <!-- HARİTA -->
+    <div id="map" style="height: 300px; margin: 20px 0; border-radius: 10px;"></div>
+
+    <h3>⭐ Favori Şehirler</h3>
+    <ul id="favoritesList"></ul>
+
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
